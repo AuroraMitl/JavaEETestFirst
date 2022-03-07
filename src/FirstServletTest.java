@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,9 +14,17 @@ public class FirstServletTest extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+
         PrintWriter pw = response.getWriter();
+
         pw.println("<html>");
-        pw.println("<h1> Hello World! </h1>");
+        pw.println("<h1> Hello, " + name + "!</h1>");
         pw.println("</html>");
+
+        //response.sendRedirect("/FirstJSP.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/FirstJSP.jsp");
+        dispatcher.forward(request,response);
+
     }
 }

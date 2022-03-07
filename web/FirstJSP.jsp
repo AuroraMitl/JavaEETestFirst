@@ -22,6 +22,15 @@
             <%= someString %>
             <%= new java.util.Date()
             %>
+    </p>
+
+    <p>
+        <%@ page import="logic.TestClass" %>
+        <% TestClass testClass = new TestClass(); %>
+        <%= testClass.getInfo()
+        %>
+    </p>
+
     <p>
             <%
 
@@ -35,5 +44,8 @@
                }
             %>
         </p>
+
+    <h1>----------------------------------</h1>
+
     </body>
 </html>
