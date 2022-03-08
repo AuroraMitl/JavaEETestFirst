@@ -8,10 +8,47 @@
         <servlet-name>FirstServletTest</servlet-name>
         <servlet-class>FirstServletTest</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SetCookiesServlet</servlet-name>
+        <servlet-class>SetCookiesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetCookiesServlet</servlet-name>
+        <servlet-class>GetCookiesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteCookiesServlet</servlet-name>
+        <servlet-class>DeleteCookiesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteCookiesServlet</servlet-name>
+        <url-pattern>/DeleteCookies</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>FirstServletTest</servlet-name>
         <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SetCookiesServlet</servlet-name>
+        <url-pattern>/SetCookies</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>GetCookiesServlet</servlet-name>
+        <url-pattern>/GetCookies</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LibraryServlet</servlet-name>
+        <servlet-class>LibraryServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LibraryServlet</servlet-name>
+        <url-pattern>/library</url-pattern>
     </servlet-mapping>
 
 </web-app>
