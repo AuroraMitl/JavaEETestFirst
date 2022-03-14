@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Ольга
-  Date: 06.03.2022
-  Time: 12:19
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
@@ -46,6 +40,24 @@
         </p>
 
     <h1>----------------------------------</h1>
+
+    <p>
+
+    <h3>New books</h3>
+    <form action="library" method="post">
+        <label>Title</label><br>
+        <input name="title"/><br>
+        <label>Author</label><br>
+        <input name="author"/><br>
+        <label>Quantity</label><br>
+        <input name="quantity" type="number" min="10" /><br>
+
+        <button type="submit">ZumZum</button>
+    </form>
+
+    </p>
+
+    </form>
 
     </body>
 </html>
